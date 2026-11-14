@@ -1,0 +1,207 @@
+/*
+ * Shared Discovery Filter Toolbar Styles
+ * Reused across DestinationsPage and PackagesPage.
+ */
+
+.discovery-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-8);
+}
+
+.discovery-toolbar__top {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .discovery-toolbar__top--with-sort {
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 240px);
+    align-items: end;
+  }
+}
+
+.discovery-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.discovery-field__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.discovery-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.discovery-search__icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.discovery-search__input {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-10) var(--space-2) 2.5rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-primary);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.discovery-search__input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.discovery-search__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+.discovery-search__clear {
+  position: absolute;
+  right: var(--space-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.discovery-search__clear:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.discovery-select {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-primary);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.discovery-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+.discovery-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.discovery-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.discovery-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.discovery-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.35rem var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-primary);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.discovery-pill:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.discovery-pill--active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.discovery-pill--active:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-contrast);
+}
+
+.discovery-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.discovery-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.discovery-count strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.discovery-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 36px;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-accent-text);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.discovery-reset:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+}

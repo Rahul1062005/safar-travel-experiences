@@ -1,0 +1,10 @@
+.site-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+.site-main {
+  flex: 1;
+}

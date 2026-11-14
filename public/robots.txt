@@ -1,0 +1,6 @@
+# Robots configuration for Safar (fictional travel portfolio concept)
+User-agent: *
+Allow: /
+
+# When deploying to a custom domain, add:
+# Sitemap: https://your-domain.example/sitemap.xml
